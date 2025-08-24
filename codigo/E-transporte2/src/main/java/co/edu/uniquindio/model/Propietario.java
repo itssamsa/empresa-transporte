@@ -13,8 +13,6 @@ public class Propietario {
 
     private List<VehiculoCarga> listaVehiculosAsociados = new ArrayList<>();
 
-    EmpresaTransporte ownedByEmpresaTransporte;
-
     public Propietario() {
     }
 
@@ -25,7 +23,6 @@ public class Propietario {
         this.numeroCelular = numeroCelular;
         this.vehiculo = vehiculo;
         this.edad = edad;
-
     }
 
     public String getNombre() {
@@ -44,16 +41,6 @@ public class Propietario {
         this.numeroIdentificacion = numeroIdentificacion;
     }
 
-    @Override
-    public String toString() {
-        return "Propietario{" +
-                "nombre='" + nombre + '\'' +
-                ", numeroIdentificacion='" + numeroIdentificacion + '\'' +
-                ", email='" + email + '\'' +
-                ", numeroCelular='" + numeroCelular + '\'' +
-                '}';
-    }
-
     public String getEmail() {
         return email;
     }
@@ -70,14 +57,6 @@ public class Propietario {
         this.numeroCelular = numeroCelular;
     }
 
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
     public Vehiculo getVehiculo() {
         return vehiculo;
     }
@@ -92,5 +71,23 @@ public class Propietario {
 
     public void setListaVehiculosAsociados(List<VehiculoCarga> listaVehiculosAsociados) {
         this.listaVehiculosAsociados = listaVehiculosAsociados;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    @Override
+    public String toString() {
+        return "Propietario{" +
+                "nombre='" + nombre + '\'' +
+                ", numeroIdentificacion='" + numeroIdentificacion + '\'' +
+                ", email='" + email + '\'' +
+                ", numeroCelular='" + numeroCelular + '\'' +
+                '}';
     }
 }
